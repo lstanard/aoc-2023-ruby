@@ -1,12 +1,8 @@
 require_relative '../main'
 
 class Day1 < AoCBase
-  def initialize
-    self.part1
-  end
-
-  def part1
-    input = self.input_loader(1, true)
+  def part1(sample=false)
+    input = self.input_loader(1, sample)
     result = 0
     num_regex = /\d/
     input.each do |i|
