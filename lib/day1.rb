@@ -6,11 +6,14 @@ class Day1 < AoCBase
   end
 
   def part1
-    # input = self.input_loader(1, true)
-    # puts input
-    return 142
+    input = self.input_loader(1, true)
+    result = 0
+    num_regex = /\d/
+    input.each do |i|
+      matches = i.scan(num_regex)
+      value = "#{matches[0]}#{matches.length > 1 ? matches.last : matches[0]}"
+      result += value.to_i
+    end
+    return result
   end
 end
-
-Day1.new
-
