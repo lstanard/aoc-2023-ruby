@@ -1,8 +1,5 @@
 class AoCBase
-  def input_loader(day, sample = false)
-    puts "Reading #{sample ? 'sample ' : ''}input for day #{day}"
-    path = "input/day#{day}#{sample ? '.sample' : ''}.txt"
-    lines = File.readlines(path)
-    return lines
+  def load_input(day, part, sample = false)
+    return File.readlines("input/day#{day}-part#{part}#{sample ? '.sample' : ''}.txt")
   end
 end
