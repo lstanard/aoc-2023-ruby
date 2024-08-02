@@ -1,5 +1,7 @@
 class AoCBase
   def load_input(day, part, sample = false)
-    return File.readlines("input/day#{day}-part#{part}#{sample ? '.sample' : ''}.txt")
+    path = "input/day#{day}-part#{part}#{sample ? '.sample' : ''}.txt"
+    puts path
+    File.readlines(path)
   end
 end
